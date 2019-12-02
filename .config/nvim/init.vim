@@ -11,6 +11,9 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " language packs
 Plug 'sheerun/vim-polyglot'
 
+" snippets
+Plug 'SirVer/ultisnips'
+
 " markdown syntax
 Plug 'plasticboy/vim-markdown'
 
@@ -37,6 +40,9 @@ Plug 'scrooloose/nerdcommenter'
 
 " lightline
 " Plug 'itchyny/lightline.vim'
+
+" airline
+Plug 'vim-airline/vim-airline'
 
 " nerdtree
 Plug 'scrooloose/nerdtree'
@@ -107,6 +113,9 @@ set conceallevel=2
 let NERDTreeShowHidden=1  " always show dot files
 let NERDTreeQuitOnOpen=1  " quit after open
 map <C-o> :NERDTreeToggle<CR>
+
+" airline
+let g:airline_theme='onedark'
 
 
 " Colors

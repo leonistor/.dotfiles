@@ -25,6 +25,8 @@ abbr -a bu brew update
 
 [bat](https://github.com/sharkdp/bat) a cat clone with wings
 
+[ripgrep](https://github.com/BurntSushi/ripgrep) very fast grep
+
 ## golang
 
 using [Ahmad guide](https://ahmadawais.com/install-go-lang-on-macos-with-homebrew/).
