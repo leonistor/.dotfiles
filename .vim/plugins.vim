@@ -11,11 +11,23 @@ Plug 'joshdick/onedark.vim'
 " language packs
 Plug 'sheerun/vim-polyglot'
 
+" markdown syntax
+Plug 'plasticboy/vim-markdown'
+
 " number toggle
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " automatic closing
 Plug 'raimondi/delimitmate'
+
+" indent guides
+Plug 'yggdroot/indentline'
+
+" align
+Plug 'junegunn/vim-easy-align'
+
+" comments
+Plug 'scrooloose/nerdcommenter'
 
 " lightline
 Plug 'itchyny/lightline.vim'

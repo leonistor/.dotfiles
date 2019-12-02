@@ -73,4 +73,5 @@ map <C-o> :NERDTreeToggle<CR>
 " colorscheme dracula
 colorscheme onedark
 " let g:lightline.colorscheme='onehalfdark'
+set background=dark
 
