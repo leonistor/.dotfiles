@@ -13,6 +13,14 @@ Add env variable: set and export universal variable `set -Ux VAR "VAR_VALUE"` (o
 
 See [tutorial](https://fishshell.com/docs/current/tutorial.html)
 
+Use abbrevs:
+
+```bash
+abbr -a bug brew upgrade
+abbr -a bo brew outdated
+abbr -a bu brew update
+```
+
 ## utilities
 
 [bat](https://github.com/sharkdp/bat) a cat clone with wings

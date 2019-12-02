@@ -5,6 +5,9 @@ call plug#begin('~/.vim/plugged')
 " Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'joshdick/onedark.vim'
 
+" golang
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 " language packs
 Plug 'sheerun/vim-polyglot'
 
