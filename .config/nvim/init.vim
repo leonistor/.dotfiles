@@ -24,7 +24,7 @@ Plug 'roman/golden-ratio'
 Plug 'raimondi/delimitmate'
 
 " indent guides
-Plug 'yggdroot/indentline'
+" Plug 'yggdroot/indentline'
 
 " align
 Plug 'junegunn/vim-easy-align'
@@ -63,6 +63,7 @@ set hlsearch " highlight matches
 
 " set wrap " turn on line wrapping
 set scrolloff=3 " show 3 lines of context around cursor
+" nnoremap 9 $ " jump to eol with 9, as 0 is beginning
 
 " tabs
 set tabstop=4
@@ -89,6 +90,10 @@ nnoremap <C-l> <C-w>l  " Ctrl-l move to right split
 
 
 " Plugins config
+
+" markdown
+let g:vim_markdown_folding_disabled = 1
+set conceallevel=2
 
 " fix lightline plugin
 " set laststatus=2
