@@ -9,11 +9,15 @@ Using [a simpler way to manage your dotfiles](https://www.anand-iyer.com/blog/20
 
 Add to path: `set -U fish_user_paths ~/bin $fish_user_paths`
 
-Add env variable: set and export universal variable `set -Ux VAR "VAR_VALUE"` or `set -gx LANG "en_US.UTF-8"` in `config.fish`
+Add env variable: set and export universal variable `set -Ux VAR "VAR_VALUE"` (or `set -gx LANG "en_US.UTF-8"` in `config.fish` if VAR conflicts with system variables, see [FAQ](https://fishshell.com/docs/current/faq.html#faq-exported-uvar))
 
 See [tutorial](https://fishshell.com/docs/current/tutorial.html)
 
 ## utilities
 
 [bat](https://github.com/sharkdp/bat) a cat clone with wings
+
+## golang
+
+using [Ahmad guide](https://ahmadawais.com/install-go-lang-on-macos-with-homebrew/).
 

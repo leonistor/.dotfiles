@@ -63,7 +63,6 @@ set hlsearch " highlight matches
 
 " set wrap " turn on line wrapping
 set scrolloff=3 " show 3 lines of context around cursor
-" nnoremap 9 $ " jump to eol with 9, as 0 is beginning
 
 " tabs
 set tabstop=4
