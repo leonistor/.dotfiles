@@ -35,6 +35,9 @@ Plug 'raimondi/delimitmate'
 " align
 Plug 'junegunn/vim-easy-align'
 
+" trailing spaces and newlines
+Plug 'ntpeters/vim-better-whitespace'
+
 " comments
 Plug 'scrooloose/nerdcommenter'
 
@@ -96,12 +99,22 @@ set splitright  " open a new horizontal split on the right
 nnoremap <C-h> <C-w>h  " Ctrl-h move to left split
 nnoremap <C-l> <C-w>l  " Ctrl-l move to right split
 
+" python3
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 
 " Plugins config
 
 " markdown
 let g:vim_markdown_folding_disabled = 1
 set conceallevel=2
+
+" whitespace
+" enable highlighting and stripping whitespace on save by default
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=1
+" strip white lines at the end of the file when stripping whitespace
+let g:strip_whitelines_at_eof=1
 
 " fix lightline plugin
 " set laststatus=2
