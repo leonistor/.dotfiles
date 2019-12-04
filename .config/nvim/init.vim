@@ -1,4 +1,6 @@
-" Plugins
+"-vvv- = section separator
+
+"-vvv- Plugins
 call plug#begin('~/.vim/plugged')
 
 " color themes
@@ -29,9 +31,6 @@ Plug 'roman/golden-ratio'
 " automatic closing
 Plug 'raimondi/delimitmate'
 
-" indent guides
-" Plug 'yggdroot/indentline'
-
 " align
 Plug 'junegunn/vim-easy-align'
 
@@ -40,9 +39,6 @@ Plug 'ntpeters/vim-better-whitespace'
 
 " comments
 Plug 'scrooloose/nerdcommenter'
-
-" lightline
-" Plug 'itchyny/lightline.vim'
 
 " airline
 Plug 'vim-airline/vim-airline'
@@ -53,7 +49,7 @@ Plug 'scrooloose/nerdtree'
 call plug#end()
 
 
-" Config
+"-vvv- Config
 
 set showcmd " display incomplete commands
 set showmode " display current mode
@@ -71,39 +67,55 @@ set relativenumber " relative numbers
 set ruler " show cursor position
 
 set incsearch " highlight matches as typing
-set hlsearch " highlight matches
+set nohlsearch " no highlight matches, use <Leader-h> to highlight
 
 " set wrap " turn on line wrapping
-set scrolloff=3 " show 3 lines of context around cursor
+set scrolloff=4 " show 3 lines of context around cursor
 
 " tabs
 set tabstop=4
 set shiftwidth=4
 set expandtab
 
-" set the terminal's title
-" set title
-" no beeping: handled by iTerm on mac
-" set visualbell
-
 " don't make a backup before overwriting a file
 set nobackup
 set nowritebackup
-" keep swap files in one location
-" set directory=$HOME/.vim/tmp//,.
 
 " splits
 set splitbelow  " open a new vertical split below
 set splitright  " open a new horizontal split on the right
+
+
+"-vvv- Key maps
+
+" space key as leader
+let mapleader = "\<Space>"
+" upperleft key on magic keyboard
+nmap § $
+" Ctrl-S write file
+nmap <C-S> :w<CR>
+imap <C-S> <esc>:w<CR>
+" quick and dirty exit insert mode
+imap jk <esc>
+imap kj <esc>
 " navigate splits
 nnoremap <C-h> <C-w>h  " Ctrl-h move to left split
 nnoremap <C-l> <C-w>l  " Ctrl-l move to right split
+" `q` to close the buffer for help files, just current <buffer>
+autocmd Filetype help nnoremap <buffer> q :q<CR>
+" no search highlights
+nmap <Leader>h :nohls<CR>
+" NerdTree
+nmap <Leader>o :NERDTree<CR>
+
+
+"-vvv- Neovim
 
 " python3
 let g:python3_host_prog = '/usr/local/bin/python3'
 
 
-" Plugins config
+"-vvv- Plugins config
 
 " markdown
 let g:vim_markdown_folding_disabled = 1
@@ -116,22 +128,15 @@ let g:strip_whitespace_on_save=1
 " strip white lines at the end of the file when stripping whitespace
 let g:strip_whitelines_at_eof=1
 
-" fix lightline plugin
-" set laststatus=2
-" fix lightline delay when exit insert mode
-" set ttimeout ttimeoutlen=10
-" lightline setup
-
 " NerdTree
 let NERDTreeShowHidden=1  " always show dot files
 let NERDTreeQuitOnOpen=1  " quit after open
-map <C-o> :NERDTreeToggle<CR>
 
 " airline
 let g:airline_theme='onedark'
 
 
-" Colors
+"-vvv- Colors
 
 " colorscheme dracula
 " brighter white
@@ -141,4 +146,3 @@ let g:onedark_color_overrides = {
 colorscheme onedark
 " let g:lightline.colorscheme='onehalfdark'
 set background=dark
-
