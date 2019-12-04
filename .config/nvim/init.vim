@@ -1,4 +1,5 @@
 "-vvv- = section separator
+" TODO: remember or setup :PlugUpdate
 
 "-vvv- Plugins
 call plug#begin('~/.vim/plugged')
@@ -42,6 +43,12 @@ Plug 'scrooloose/nerdcommenter'
 
 " airline
 Plug 'vim-airline/vim-airline'
+
+" TODO: workspace
+" Plug 'thaerkh/vim-workspace'
+
+" git
+Plug 'tpope/vim-fugitive'
 
 " nerdtree
 Plug 'scrooloose/nerdtree'
