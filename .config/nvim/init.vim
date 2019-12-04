@@ -46,6 +46,9 @@ Plug 'vim-airline/vim-airline'
 " nerdtree
 Plug 'scrooloose/nerdtree'
 
+" my cheatsheet
+Plug 'reireias/vim-cheatsheet'
+
 call plug#end()
 
 
@@ -107,6 +110,8 @@ autocmd Filetype help nnoremap <buffer> q :q<CR>
 nmap <Leader>h :nohls<CR>
 " NerdTree
 nmap <Leader>o :NERDTree<CR>
+" cheatsheet
+nmap ? :Cheat<CR>
 
 
 "-vvv- Neovim
@@ -134,6 +139,13 @@ let NERDTreeQuitOnOpen=1  " quit after open
 
 " airline
 let g:airline_theme='onedark'
+
+" my cheatsheet
+let g:cheatsheet#cheat_file = '~/.github/my-vim-cheatsheet.md'
+let g:cheatsheet#float_window = 1
+" you can change float window size.
+let g:cheatsheet#float_window_width_ratio = 0.6
+let g:cheatsheet#float_window_height_ratio = 0.6
 
 
 "-vvv- Colors
