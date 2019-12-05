@@ -105,8 +105,8 @@ set splitright  " open a new horizontal split on the right
 let mapleader = "\<Space>"
 " upperleft key on magic keyboard
 nmap § $
-nmap <Leader>j  20j " jump down
-nmap <Leader>k -20k " jump up
+"nmap <Leader>j  20j " jump down
+"nmap <Leader>k -20k " jump up
 
 " Ctrl-S write file
 nmap <C-S> :w<CR>
@@ -119,10 +119,14 @@ nnoremap <C-h> <C-w>h  " Ctrl-h move to left split
 nnoremap <C-l> <C-w>l  " Ctrl-l move to right split
 " `q` to close the buffer for help files, just current <buffer>
 autocmd Filetype help nnoremap <buffer> q :q<CR>
+
+" tile vertically
+nmap <Leader>vs :vert ba<CR>
 " no search highlights
 nmap <Leader>h :nohls<CR>
 " NerdTree
-nmap <Leader>o :NERDTree<CR>
+nmap <Leader>o :NERDTreeToggle<Enter>
+
 " cheatsheet
 nmap ? :Cheat<CR>
 
@@ -145,10 +149,14 @@ let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
 " strip white lines at the end of the file when stripping whitespace
 let g:strip_whitelines_at_eof=1
+" don't use here
+let g:better_whitespace_filetypes_blacklist=['diff', 'gitcommit', 'unite', 'qf', 'help']
+
 
 " NerdTree
 let NERDTreeShowHidden=1  " always show dot files
 let NERDTreeQuitOnOpen=1  " quit after open
+let NERDSpaceDelims=1  " space after/before comment
 
 " airline
 let g:airline_theme='onedark'
@@ -208,21 +216,21 @@ nmap <leader>rn <Plug>(coc-rename)
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 " Show all diagnostics
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+"nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+"nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 " Show commands
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+"nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+"nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
 " Search workspace symbols
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+"nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+"nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+"nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+"nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " golang
 " disable vim-go :GoDef short cut (gd)
