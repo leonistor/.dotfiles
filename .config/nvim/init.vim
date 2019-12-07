@@ -105,8 +105,8 @@ set splitright  " open a new horizontal split on the right
 let mapleader = "\<Space>"
 " upperleft key on magic keyboard
 nmap § $
-"nmap <Leader>j  20j " jump down
-"nmap <Leader>k -20k " jump up
+" move forward one full screen
+nnoremap <Leader><Space> <C-F>
 
 " Ctrl-S write file
 nmap <C-S> :w<CR>
