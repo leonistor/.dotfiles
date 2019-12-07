@@ -167,8 +167,6 @@ let g:cheatsheet#float_window = 1
 let g:cheatsheet#float_window_width_ratio = 0.6
 let g:cheatsheet#float_window_height_ratio = 0.6
 
-" UltiSnips
-" let g:UltiSnipsExpandTrigger="<C-P>"
 
 "-vvv- coc.vim
 
@@ -250,10 +248,26 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " golang
 
+" use https://hackernoon.com/my-neovim-setup-for-go-7f7b6e805876
+
 " disable vim-go :GoDef short cut (gd)
 " this is handled by LanguageClient [LC]
 let g:go_def_mapping_enabled = 0
-
+" Run goimports when running gofmt
+let g:go_fmt_command = "goimports"
+" Enable syntax highlighting per default
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+" Show type information
+let g:go_auto_type_info = 1
+" Highlight variable uses
+let g:go_auto_sameids = 1
 
 "-vvv- Colors
 
