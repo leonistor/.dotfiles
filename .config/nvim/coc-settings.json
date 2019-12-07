@@ -6,8 +6,7 @@
       "filetypes": ["go"]
     }
   },
-  "snippets.ultisnips.directories":[
-    "UltiSnips",
+  "snippets.ultisnips.directories": [
     "gosnippets/UltiSnips"
   ]
 }

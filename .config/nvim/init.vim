@@ -14,7 +14,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " language packs
 Plug 'sheerun/vim-polyglot'
 
-" replaced by coc-snippets snippets
+" snippets
 " Plug 'SirVer/ultisnips'
 
 " markdown syntax
@@ -152,7 +152,6 @@ let g:strip_whitelines_at_eof=1
 " don't use here
 let g:better_whitespace_filetypes_blacklist=['diff', 'gitcommit', 'unite', 'qf', 'help']
 
-
 " NerdTree
 let NERDTreeShowHidden=1  " always show dot files
 let NERDTreeQuitOnOpen=1  " quit after open
@@ -168,6 +167,8 @@ let g:cheatsheet#float_window = 1
 let g:cheatsheet#float_window_width_ratio = 0.6
 let g:cheatsheet#float_window_height_ratio = 0.6
 
+" UltiSnips
+" let g:UltiSnipsExpandTrigger="<C-P>"
 
 "-vvv- coc.vim
 
