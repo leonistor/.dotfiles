@@ -4,3 +4,6 @@
 
 use variable in command: press `Ctrl-R` then `=g:variable...` `<CR>`
 
+## golang
+
+`K` quick godoc on symbol

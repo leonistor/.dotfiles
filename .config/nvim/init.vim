@@ -155,6 +155,9 @@ let g:better_whitespace_filetypes_blacklist=['diff', 'gitcommit', 'unite', 'qf',
 " NerdTree
 let NERDTreeShowHidden=1  " always show dot files
 let NERDTreeQuitOnOpen=1  " quit after open
+let NERDTreeIgnore=['\.git$']
+
+" NerdComments
 let NERDSpaceDelims=1  " space after/before comment
 
 " airline
