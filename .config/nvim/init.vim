@@ -68,6 +68,9 @@ set showcmd " display incomplete commands
 set showmode " display current mode
 set backspace=indent,eol,start " intuitive backspacing
 
+filetype plugin indent on " enable filetype detection
+set autoindent
+
 set hidden " handle multiple buffers better
 set wildmenu " enhanced command line completion
 set wildmode=list:longest " complete files like a shell
@@ -251,6 +254,7 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " golang
 
+" use https://github.com/fatih/vim-go-tutorial/blob/master/vimrc
 " use https://hackernoon.com/my-neovim-setup-for-go-7f7b6e805876
 
 " disable vim-go :GoDef short cut (gd)
@@ -271,6 +275,12 @@ let g:go_highlight_extra_types = 1
 let g:go_auto_type_info = 1
 " Highlight variable uses
 let g:go_auto_sameids = 1
+
+" Jump to next error with Ctrl-] and previous error with Ctrl-[. Close the
+" quickfix window with <leader>a
+map <C-]> :cnext<CR>
+map <C-[> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
 
 "-vvv- Colors
 
