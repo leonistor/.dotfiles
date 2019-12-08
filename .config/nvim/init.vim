@@ -68,6 +68,7 @@ set showcmd " display incomplete commands
 set showmode " display current mode
 set backspace=indent,eol,start " intuitive backspacing
 
+syntax on
 filetype plugin indent on " enable filetype detection
 set autoindent
 
@@ -164,6 +165,7 @@ let NERDTreeIgnore=['\.git$']
 let NERDSpaceDelims=1  " space after/before comment
 
 " airline
+let g:airline_powerline_fonts = 1
 let g:airline_theme='onedark'
 
 " my cheatsheet
@@ -278,8 +280,8 @@ let g:go_auto_sameids = 1
 
 " Jump to next error with Ctrl-] and previous error with Ctrl-[. Close the
 " quickfix window with <leader>a
-map <C-]> :cnext<CR>
-map <C-[> :cprevious<CR>
+au FileType go nmap <C-]> :cnext<CR>
+au FileType go nmap <C-[> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
 
 "-vvv- Colors
@@ -289,6 +291,6 @@ nnoremap <leader>a :cclose<CR>
 let g:onedark_color_overrides = {
 \ "white": {"gui": "eeeeee", "cterm": "255", "cterm16": "7" }
 \}
-colorscheme onedark
-" let g:lightline.colorscheme='onehalfdark'
+
 set background=dark
+colorscheme onedark
