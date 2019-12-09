@@ -32,6 +32,9 @@ Plug 'roman/golden-ratio'
 " automatic closing
 Plug 'raimondi/delimitmate'
 
+" tags and quotes
+Plug 'tpope/vim-surround'
+
 " align
 Plug 'junegunn/vim-easy-align'
 
