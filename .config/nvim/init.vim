@@ -23,6 +23,9 @@ Plug 'plasticboy/vim-markdown'
 " number toggle
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
+" show changes in buffer
+Plug 'chrisbra/changesPlugin'
+
 " Text object targets
 Plug 'wellle/targets.vim'
 
@@ -49,6 +52,10 @@ Plug 'vim-airline/vim-airline'
 
 " TODO: workspace
 " Plug 'thaerkh/vim-workspace'
+
+" TODO: tmux
+" Plug 'jgdavey/tslime.vim'
+" Plug 'christoomey/vim-tmux-runner'
 
 " git
 Plug 'tpope/vim-fugitive'
@@ -129,8 +136,8 @@ autocmd Filetype help nnoremap <buffer> q :q<CR>
 
 " tile vertically
 nmap <Leader>vs :vert ba<CR>
-" no search highlights
-nmap <Leader>h :nohls<CR>
+" toggle search highlights
+nmap <Leader>h :hls!<CR>
 " NerdTree
 nmap <Leader>o :NERDTreeToggle<Enter>
 
@@ -148,6 +155,8 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 
 " markdown
 let g:vim_markdown_folding_disabled = 1
+" let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal_code_blocks = 0
 set conceallevel=2
 
 " whitespace

@@ -31,3 +31,14 @@ abbr -a bu brew update
 
 using [Ahmad guide](https://ahmadawais.com/install-go-lang-on-macos-with-homebrew/).
 
+## vim
+
+[upcase vim tutorial](https://thoughtbot.com/upcase/onramp-to-vim)
+
+[vimcasts](http://vimcasts.org/episodes)
+
+## tmux
+
+[upcase tmux tutorial](https://thoughtbot.com/upcase/tmux)
+
+book: [the tao of tmux](https://leanpub.com/the-tao-of-tmux/read)
