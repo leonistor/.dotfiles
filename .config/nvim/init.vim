@@ -121,7 +121,6 @@ let mapleader = "\<Space>"
 nmap § $
 " move forward one full screen
 nnoremap <Leader><Space> <C-F>
-
 " Ctrl-S write file
 nmap <C-S> :w<CR>
 imap <C-S> <esc>:w<CR>
@@ -133,16 +132,19 @@ nnoremap <C-h> <C-w>h  " Ctrl-h move to left split
 nnoremap <C-l> <C-w>l  " Ctrl-l move to right split
 " `q` to close the buffer for help files, just current <buffer>
 autocmd Filetype help nnoremap <buffer> q :q<CR>
-
 " tile vertically
 nmap <Leader>vs :vert ba<CR>
 " toggle search highlights
-nmap <Leader>h :hls!<CR>
+nmap <Leader>h :set hls!<CR>
 " NerdTree
 nmap <Leader>o :NERDTreeToggle<Enter>
-
 " cheatsheet
 nmap ? :Cheat<CR>
+" navigate buffers
+" nnoremap <Leader>/ :ls<CR>:b<Space>
+nnoremap <Leader>/ :bnext<CR>
+" insert line after in normal mode, blanked if autocomment on
+nmap <Leader><CR> o<Esc>d$k
 
 
 "-vvv- Neovim
@@ -266,7 +268,7 @@ let g:coc_snippet_prev = '<c-k>'
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 
-" golang
+"-vvv- golang
 
 " use https://github.com/fatih/vim-go-tutorial/blob/master/vimrc
 " use https://hackernoon.com/my-neovim-setup-for-go-7f7b6e805876
@@ -288,13 +290,30 @@ let g:go_highlight_extra_types = 1
 " Show type information
 let g:go_auto_type_info = 1
 " Highlight variable uses
-let g:go_auto_sameids = 1
+" let g:go_auto_sameids = 1
+
+" Build and run
+" autocmd FileType go nmap <leader>b  <Plug>(go-build)
+" run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+autocmd FileType go nmap <Leader>b :<C-u>call <SID>build_go_files()<CR>
+autocmd FileType go nmap <Leader>r <Plug>(go-run)
+autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 
 " Jump to next error with Ctrl-] and previous error with Ctrl-[. Close the
 " quickfix window with <leader>a
+let g:go_list_type = 'quickfix'
 au FileType go nmap <C-]> :cnext<CR>
 au FileType go nmap <C-[> :cprevious<CR>
-nnoremap <leader>a :cclose<CR>
+nnoremap <Leader>a :cclose<CR>
+
 
 "-vvv- Colors
 
