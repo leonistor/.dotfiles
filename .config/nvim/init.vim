@@ -310,8 +310,8 @@ autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 " Jump to next error with Ctrl-] and previous error with Ctrl-[. Close the
 " quickfix window with <leader>a
 let g:go_list_type = 'quickfix'
-au FileType go nmap <C-]> :cnext<CR>
-au FileType go nmap <C-[> :cprevious<CR>
+autocmd FileType go nnoremap <Leader>] :cnext<CR>
+autocmd FileType go nnoremap <Leader>[ :cprevious<CR>
 nnoremap <Leader>a :cclose<CR>
 
 
