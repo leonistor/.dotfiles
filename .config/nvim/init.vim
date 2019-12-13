@@ -169,6 +169,10 @@ let g:strip_whitespace_on_save=1
 let g:strip_whitelines_at_eof=1
 " don't use here
 let g:better_whitespace_filetypes_blacklist=['diff', 'gitcommit', 'unite', 'qf', 'help']
+" colors
+let g:better_whitespace_ctermcolor='LightYellow'
+let g:better_whitespace_guicolor='#FFFACD'
+
 
 " NerdTree
 let NERDTreeShowHidden=1  " always show dot files
@@ -266,6 +270,9 @@ let g:coc_snippet_prev = '<c-k>'
 
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+" coc-prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 
 "-vvv- golang

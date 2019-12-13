@@ -9,5 +9,6 @@
   "snippets.ultisnips.directories": [
     "UltiSnips",
     "gosnippets/UltiSnips"
-  ]
+  ],
+  "coc.preferences.formatOnSaveFiletypes": ["css", "html", "Markdown"]
 }
