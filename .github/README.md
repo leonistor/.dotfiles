@@ -23,7 +23,13 @@ abbr -a bu brew update
 
 ## utilities
 
+### cat >> bat
+
 [bat](https://github.com/sharkdp/bat) a cat clone with wings
+
+[add syntax](https://github.com/sharkdp/bat#adding-new-syntaxes--language-definitions) from sublime text; for [tmux.conf](https://github.com/gerardroche/sublime-tmux).
+
+# grep
 
 [ripgrep](https://github.com/BurntSushi/ripgrep) very fast grep
 
