@@ -145,7 +145,12 @@ nmap ? :Cheat<CR>
 nnoremap <Leader>/ :bnext<CR>
 " insert line after in normal mode, blanked if autocomment on
 nmap <Leader><CR> o<Esc>d$k
-
+" zoom pane/window
+" see https://medium.com/@vinodkri/zooming-vim-window-splits-like-a-pro-d7a9317d40
+" zoom +
+nnoremap <Leader>z <C-W>_ \| <C-W>\|
+" equal size
+nnoremap <Leader>Z <C-W>=
 
 "-vvv- Neovim
 

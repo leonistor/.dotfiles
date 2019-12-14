@@ -9,6 +9,8 @@ Using [a simpler way to manage your dotfiles](https://www.anand-iyer.com/blog/20
 
 Add to path: `set -U fish_user_paths ~/bin $fish_user_paths`
 
+Manipulate path: see [the right way](https://github.com/fish-shell/fish-shell/issues/2639#issuecomment-301896209)
+
 Add env variable: set and export universal variable `set -Ux VAR "VAR_VALUE"` (or `set -gx LANG "en_US.UTF-8"` in `config.fish` if VAR conflicts with system variables, see [FAQ](https://fishshell.com/docs/current/faq.html#faq-exported-uvar))
 
 See [tutorial](https://fishshell.com/docs/current/tutorial.html)
@@ -48,3 +50,24 @@ using [Ahmad guide](https://ahmadawais.com/install-go-lang-on-macos-with-homebre
 [upcase tmux tutorial](https://thoughtbot.com/upcase/tmux)
 
 book: [the tao of tmux](https://leanpub.com/the-tao-of-tmux/read)
+
+## tmuxinator
+
+Use [intro](https://thoughtbot.com/blog/templating-tmux-with-tmuxinator) or [example](https://stephencodes.com/quicker-context-switching-with-tmuxinator/) or [other example](https://jessarcher.com/blog/managing-development-environments-with-tmux-and-tmuxinator/)
+
+Local project `.tmuxinator.yml` configuration:
+
+```yaml
+# ./.tmuxinator.yml
+
+name: <project-name>
+root: ~/<project-path>
+
+windows:
+  - edit:
+      layout: main-horizontal
+      panes:
+        - nvim main.go
+        - clear
+```
+
