@@ -15,7 +15,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'sheerun/vim-polyglot'
 
 " snippets
-" Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 
 " markdown syntax
 Plug 'plasticboy/vim-markdown'
@@ -46,6 +46,10 @@ Plug 'ntpeters/vim-better-whitespace'
 
 " comments
 Plug 'scrooloose/nerdcommenter'
+
+" fzf
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 " airline
 Plug 'vim-airline/vim-airline'
