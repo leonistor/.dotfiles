@@ -141,12 +141,12 @@ nmap <Leader>vs :vert ba<CR>
 " toggle search highlights
 nmap <Leader>h :set hls!<CR>
 " NerdTree
-nmap <Leader>o :NERDTreeToggle<Enter>
+nmap <silent> <Leader>o :NERDTreeToggle<Enter>
 " cheatsheet
 nmap ? :Cheat<CR>
 " navigate buffers
 " nnoremap <Leader>/ :ls<CR>:b<Space>
-nnoremap <Leader>/ :bnext<CR>
+nnoremap <silent> <Leader>/ :bnext<CR>
 " insert line after in normal mode, blanked if autocomment on
 nmap <Leader><CR> o<Esc>d$k
 " zoom pane/window
@@ -163,6 +163,22 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 
 
 "-vvv- Plugins config
+
+" fzf
+" https://github.com/junegunn/fzf.vim
+" https://github.com/junegunn/fzf.vim
+" Add namespace for fzf.vim exported commands
+let g:fzf_command_prefix = 'Fzf'
+nnoremap <silent> <Leader>. :FzfBuffers<CR>
+nnoremap <silent> <Leader>? :FzfMaps!<CR>
+" :History " v:oldfiles and open buffers
+" :History: " Command history
+" :History/ " Search history
+" :Snippets " Snippets (UltiSnips)
+" :Commands " Commands
+" :Maps " Normal mode mappings
+" :Helptags " Help tags
+
 
 " markdown
 let g:vim_markdown_folding_disabled = 1
