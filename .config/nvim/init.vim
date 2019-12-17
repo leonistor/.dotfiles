@@ -15,7 +15,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'sheerun/vim-polyglot'
 
 " snippets
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 
 " markdown syntax
 Plug 'plasticboy/vim-markdown'
@@ -169,6 +169,8 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 " https://github.com/junegunn/fzf.vim
 " Add namespace for fzf.vim exported commands
 let g:fzf_command_prefix = 'Fzf'
+" fix keys in tmux
+let g:fzf_prefer_tmux = 1
 nnoremap <silent> <Leader>. :FzfBuffers<CR>
 nnoremap <silent> <Leader>? :FzfMaps!<CR>
 " :History " v:oldfiles and open buffers
@@ -345,6 +347,10 @@ let g:go_list_type = 'quickfix'
 autocmd FileType go nnoremap <Leader>] :cnext<CR>
 autocmd FileType go nnoremap <Leader>[ :cprevious<CR>
 nnoremap <Leader>a :cclose<CR>
+" declarations file
+autocmd FileType go nnoremap <Leader>d :GoDecls<CR>
+" declarations folder
+autocmd FileType go nnoremap <Leader>dd :GoDeclsDir<CR>
 
 
 "-vvv- Colors
