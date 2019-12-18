@@ -70,6 +70,9 @@ Plug 'scrooloose/nerdtree'
 " my cheatsheet
 Plug 'reireias/vim-cheatsheet'
 
+" scroll motion
+Plug 'yuttie/comfortable-motion.vim'
+
 " za shit: coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -230,7 +233,6 @@ set updatetime=300
 " always show signcolumns
 set signcolumn=yes
 
-
 " completion keys
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -260,7 +262,6 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR
 " close the preview window when completion is done
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
-
 " Use `[c` and `]c` to navigate diagnostics
 nmap <silent> [c <Plug>(coc-diagnostic-prev)
 nmap <silent> ]c <Plug>(coc-diagnostic-next)
@@ -281,26 +282,29 @@ nmap <leader>rn <Plug>(coc-rename)
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
-" coc-snippets
+" outline
+nmap <silent> <Leader>l :CocList outline<CR>
 
+" coc-snippets
 " Use <C-l> for trigger snippet expand.
 imap <C-l> <Plug>(coc-snippets-expand)
-
 " Use <C-j> for select text for visual placeholder of snippet.
 vmap <C-j> <Plug>(coc-snippets-select)
-
 " Use <C-j> for jump to next placeholder, it's default of coc.nvim
 let g:coc_snippet_next = '<c-j>'
-
 " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
 let g:coc_snippet_prev = '<c-k>'
-
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " coc-prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
+" TODO: checkout these
+" https://www.npmjs.com/package/coc-marketplace
+" https://www.npmjs.com/package/coc-flutter
+" https://www.npmjs.com/package/coc-yaml
+" https://www.npmjs.com/package/coc-diagnostic
 
 "-vvv- golang
 
