@@ -3,7 +3,7 @@
 function d
 	# ls -lah
 	# mac:
-	ls -AlhG
+	ls -AlhG $argv
 end
 
 function mcd
@@ -37,5 +37,5 @@ set -g theme_date_format "+%a %H:%M"
 set -gx PKG_CONFIG_PATH "/usr/local/opt/openssl/lib/pkgconfig"
 
 # locale
-set -gx LANG "en_US.UTF-8"
-set -gx LC_ALL "en_US.UTF-8"
+# set -gx LANG "en_US.UTF-8"
+# set -gx LC_ALL "en_US.UTF-8"

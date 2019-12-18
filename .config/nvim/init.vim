@@ -126,6 +126,7 @@ set splitright  " open a new horizontal split on the right
 let mapleader = "\<Space>"
 " upperleft key on magic keyboard
 nmap § $
+nmap d§ d$
 " move forward one full screen
 nnoremap <Leader><Space> <C-F>
 " Ctrl-S write file
