@@ -14,6 +14,9 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " language packs
 Plug 'sheerun/vim-polyglot'
 
+" dart
+" Plug 'dart-lang/dart-vim-plugin'
+
 " snippets
 " Plug 'SirVer/ultisnips'
 

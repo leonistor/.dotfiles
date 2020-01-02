@@ -10,5 +10,7 @@
     "UltiSnips",
     "gosnippets/UltiSnips"
   ],
-  "coc.preferences.formatOnSaveFiletypes": ["css", "html", "Markdown"]
+  "coc.preferences.formatOnSaveFiletypes": ["css", "html", "Markdown", "dart"],
+  "emmet.includeLanguages": {"template":"html"},
+  "flutter.provider.enableSnippet": true
 }
