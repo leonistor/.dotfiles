@@ -38,6 +38,9 @@ Plug 'roman/golden-ratio'
 " automatic closing
 Plug 'raimondi/delimitmate'
 
+" marks
+Plug 'kshenoy/vim-signature'
+
 " tags and quotes
 Plug 'tpope/vim-surround'
 
@@ -113,6 +116,8 @@ set scrolloff=4 " show 3 lines of context around cursor
 set tabstop=4
 set shiftwidth=4
 set expandtab
+" dart
+autocmd Filetype dart setlocal ts=2 sw=2 expandtab
 
 " don't make a backup before overwriting a file
 set nobackup
