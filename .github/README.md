@@ -71,3 +71,16 @@ windows:
         - clear
 ```
 
+## iterm2 window titles
+
+[use set-titles in .tmux.conf](https://superuser.com/a/702157) and set variables for bobthefish in config.fish
+
+## diff
+
+`nvim -d fileA fileB`
+
+`git diff fileA fileB`
+
+## node
+
+[Update dependencies using npm-check-updates](https://flaviocopes.com/update-npm-dependencies/)
