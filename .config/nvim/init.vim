@@ -74,7 +74,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 
 " my cheatsheet
-Plug 'reireias/vim-cheatsheet'
+" Plug 'reireias/vim-cheatsheet'
 
 " scroll motion
 Plug 'yuttie/comfortable-motion.vim'
@@ -154,8 +154,7 @@ nmap <Leader>vs :vert ba<CR>
 nmap <Leader>h :set hls!<CR>
 " NerdTree
 nmap <silent> <Leader>o :NERDTreeToggle<Enter>
-" cheatsheet
-nmap ? :Cheat<CR>
+
 " navigate buffers
 " nnoremap <Leader>/ :ls<CR>:b<Space>
 nnoremap <silent> <Leader>/ :bnext<CR>
@@ -281,8 +280,17 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Use U to show documentation in preview window
-nnoremap <silent> U :call <SID>show_documentation()<CR>
+" show doc floating window
+function! s:show_documentation()
+  if &filetype == 'vim'
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Use ? to show documentation in preview window
+nnoremap <silent> ? :call <SID>show_documentation()<CR>
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
