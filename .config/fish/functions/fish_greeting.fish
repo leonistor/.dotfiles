@@ -1,9 +1,9 @@
 function fish_greeting
-    set_color $fish_color_comment
+    set_color $fish_color_autosuggestion
     echo -n 'Welcome to '
     set_color normal
     echo -n (hostname)
-    set_color $fish_color_comment
+    set_color $fish_color_autosuggestion
     echo -n ' en0: '
     set_color $fish_color_cwd
     echo -n (ipconfig getifaddr en0)
@@ -24,7 +24,7 @@ function fish_greeting
             # end
             switch $mouse_level
                 case 1 2 3 4 5 6 7 8 9
-                    set_color $fish_color_error
+                    set_color $fish_color_cwd_root
                     echo " Mouse battery low: $mouse_level%!"
                 case '*'
                     set_color $fish_color_comment
