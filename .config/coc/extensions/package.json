@@ -2,11 +2,11 @@
   "dependencies": {
     "coc-css": ">=1.2.2",
     "coc-emmet": ">=1.1.4",
-    "coc-flutter": ">=1.1.0",
-    "coc-html": ">=1.2.1",
+    "coc-flutter": ">=1.2.0",
+    "coc-html": ">=1.2.3",
     "coc-json": ">=1.2.4",
     "coc-prettier": ">=1.1.11",
-    "coc-snippets": ">=2.1.17",
+    "coc-snippets": ">=2.1.18",
     "coc-ultisnips": ">=1.2.3"
   }
 }
