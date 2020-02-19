@@ -23,6 +23,9 @@ Plug 'sheerun/vim-polyglot'
 " markdown syntax
 Plug 'plasticboy/vim-markdown'
 
+" rust doc
+Plug 'rhysd/rust-doc.vim'
+
 " number toggle
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
@@ -373,6 +376,8 @@ autocmd FileType go nnoremap <Leader>d :GoDecls<CR>
 " declarations folder
 autocmd FileType go nnoremap <Leader>dd :GoDeclsDir<CR>
 
+" rust-doc
+let g:rust_doc#downloaded_rust_doc_dir = '~/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust'
 
 "-vvv- Colors
 

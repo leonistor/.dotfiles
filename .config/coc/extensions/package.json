@@ -6,7 +6,10 @@
     "coc-html": ">=1.2.3",
     "coc-json": ">=1.2.4",
     "coc-prettier": ">=1.1.11",
-    "coc-snippets": ">=2.1.18",
-    "coc-ultisnips": ">=1.2.3"
+    "coc-rls": ">=1.1.4",
+    "coc-rust-analyzer": ">=0.4.2",
+    "coc-snippets": ">=2.1.19",
+    "coc-ultisnips": ">=1.2.3",
+    "trusty-rusty-snippets": "https://github.com/polypus74/trusty_rusty_snippets"
   }
 }
