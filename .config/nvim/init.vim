@@ -20,11 +20,17 @@ Plug 'sheerun/vim-polyglot'
 " snippets
 " Plug 'SirVer/ultisnips'
 
+" elixir
+Plug 'elixir-editors/vim-elixir'
+
 " markdown syntax
 Plug 'plasticboy/vim-markdown'
 
 " rust doc
 Plug 'rhysd/rust-doc.vim'
+
+" LSP outline
+" Plug 'liuchengxu/vista.vim'
 
 " number toggle
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
@@ -320,11 +326,12 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 " coc-prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
-" TODO: checkout these
-" https://www.npmjs.com/package/coc-marketplace
-" https://www.npmjs.com/package/coc-flutter
-" https://www.npmjs.com/package/coc-yaml
-" https://www.npmjs.com/package/coc-diagnostic
+"-vvv- vista
+" Executive used when opening vista sidebar without specifying it.
+" let g:vista_default_executive = 'coc'
+" icons
+" let g:vista_icon_indent = ["▸ ", ""]
+
 
 "-vvv- golang
 

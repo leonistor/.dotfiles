@@ -10,7 +10,7 @@
     "UltiSnips",
     "gosnippets/UltiSnips"
   ],
-  "coc.preferences.formatOnSaveFiletypes": ["css", "html", "Markdown", "dart", "rust", "json"],
+  "coc.preferences.formatOnSaveFiletypes": ["css", "html", "Markdown", "dart", "rust", "json", "sql", "elixir"],
   "emmet.includeLanguages": {"template":"html"},
   "flutter.provider.enableSnippet": true,
   "rust.show_hover_context": true,
