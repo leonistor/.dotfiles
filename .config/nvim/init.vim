@@ -326,6 +326,9 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 " coc-prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
+" elixir html templates
+au BufRead,BufNewFile *.html.eex set filetype=html
+
 "-vvv- vista
 " Executive used when opening vista sidebar without specifying it.
 " let g:vista_default_executive = 'coc'

@@ -6,13 +6,20 @@
       "filetypes": ["go"]
     }
   },
-  "snippets.ultisnips.directories": [
-    "UltiSnips",
-    "gosnippets/UltiSnips"
+  "snippets.ultisnips.directories": ["UltiSnips", "gosnippets/UltiSnips"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "html",
+    "Markdown",
+    "dart",
+    "rust",
+    "json",
+    "sql",
+    "elixir"
   ],
-  "coc.preferences.formatOnSaveFiletypes": ["css", "html", "Markdown", "dart", "rust", "json", "sql", "elixir"],
-  "emmet.includeLanguages": {"template":"html"},
+  "emmet.includeLanguages": { "template": "html" },
   "flutter.provider.enableSnippet": true,
   "rust.show_hover_context": true,
-  "rust-client.updateOnStartup": true
+  "rust-client.updateOnStartup": true,
+  "html.filetypes": ["html", "handlebars", "htmldjango", "eelixir"]
 }
