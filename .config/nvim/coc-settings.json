@@ -1,25 +1,10 @@
 {
+  "codeLens.enable": true,
   "languageserver": {
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"]
-    }
+     "elixirLS": {
+      "command": "/home/leo/src/elixir-ls/release/language_server.sh",
+      "filetypes": ["elixir", "eelixir"]
+     }
   },
-  "snippets.ultisnips.directories": ["UltiSnips", "gosnippets/UltiSnips"],
-  "coc.preferences.formatOnSaveFiletypes": [
-    "css",
-    "html",
-    "Markdown",
-    "dart",
-    "rust",
-    "json",
-    "sql",
-    "elixir"
-  ],
-  "emmet.includeLanguages": { "template": "html" },
-  "flutter.provider.enableSnippet": true,
-  "rust.show_hover_context": true,
-  "rust-client.updateOnStartup": true,
-  "html.filetypes": ["html", "handlebars", "htmldjango", "eelixir"]
+  "coc.preferences.formatOnSaveFiletypes": ["json"]
 }
