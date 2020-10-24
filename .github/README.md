@@ -1,3 +1,7 @@
+# Outdated version!
+
+Use my `dotfiles` (no dot before!) repo.
+
 # My configuration files
 
 Using [a simpler way to manage your dotfiles](https://www.anand-iyer.com/blog/2018/a-simpler-way-to-manage-your-dotfiles.html).
